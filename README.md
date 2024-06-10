@@ -7,16 +7,17 @@
   <br>
 </h1>
 
-<h4 align="center">A simple bookstore API built with Spring Boot. Plus it is not Amazon</h4>
+<h4 align="center">A simple bookstore API built with Spring Boot</h4>
 
 <p align="center">
   <a href="#features">Features</a> •
   <a href="#install">Install</a> •
   <a href="#endpoints">Endpoints</a> •
   <a href="#credits">Credits</a> •
+  <a href="pt-BR.md">Português</a> •
 </p>
 
-> This project is ideal as ready-to-use api endpoints to start building your frontend projects. It may also be useful if you want a start point to learn and play with Spring Boot for building REST apis. 
+> This project is ideal if you need a ready-to-use api to start building your frontend projects. It may also be useful if you want a starting point to learn and play around with Spring Boot for building REST apis. 
 
 ## Features
 
@@ -37,19 +38,32 @@
 
 ## Install
 
-To install this application, you'll first need to have the following installed on your machine: 
+First, be sure you have the following installed on your machine: 
 - [Java SDK 8+](https://openjdk.org/projects/jdk/17/)
 - [Maven](https://maven.apache.org/)
 - [PHP 8+](https://www.php.net/)
 - [php-curl](https://www.php.net/)
 - [lib-curl](https://curl.se/)
 
-After that, run from your command line:
+After that, from your command line:
 
 ```bash
 # Clone this repository
 $ git clone https://github.com/juhachmann/not_amazon_bookstore_api
 
+# Go into the repository
+$ cd not_amazon_bookstore_api
+
+# Run the bash script
+$ ./bookstore.sh
+```
+
+Open you browser and navigate to **_localhost:8000_**
+
+
+Alternatively, you can serve the backend and frontend independently: 
+
+```bash
 # Go into the repository backend project
 $ cd not_amazon_bookstore_api/backend
 
@@ -145,11 +159,12 @@ curl -XPOST -H "Content-type: application/json" -d '{
 
 ## Credits
 
-This software used the following packages and tools:
+This software uses the following 3rd party packages and tools:
 
 - [SpringBoot](https://spring.io/projects/spring-boot)
 - [CurlBuilder](https://curlbuilder.com)
 - [CodeBeautify](https://codebeautify.org/curl-to-php-online)
 - [Bootstrap](https://getbootstrap.com/)
 
-Developed as a learning exercise for a Web Services course / CTDS / IFSC / 2023.1
+> Developed as a learning exercise for a Web Services course.
+> Curso Técnico em Desenvolvimento de Sistemas / Instituto Federal de Santa Catarina / 2023.1
