@@ -1,29 +1,159 @@
-# A simple bookstore app 
 
-> Built with Spring + PHP (a very unusual stack)
+<h1 align="center">
+  <br>
+  <img src="https://github.com/juhachmann/simple_bookstore_api/blob/main/logo2.png" alt="Logo"> 
+  <br>
+  (Not Amazon) Bookstore API
+  <br>
+</h1>
+
+<h4 align="center">A simple bookstore API built with Spring Boot. Plus it is not Amazon</h4>
+
+<p align="center">
+  <a href="#features">Features</a> •
+  <a href="#install">Install</a> •
+  <a href="#endpoints">Endpoints</a> •
+  <a href="#credits">credits</a> •
+  <a href="#context">Context</a> •
+</p>
+
+> This project is ideal as ready-to-use api endpoints to start building your frontend projects. It may also be useful if you want a start point to learn and play with Spring Boot for building REST apis. 
+
+## Features
+
+* CRUD and filter endpoints
+  - Create, read, update and delete your books
+* Repricing endpoints
+  - Reprice your books by given percentage rates
+* Mock Datasource
+  - You may add any other datasource or continue with a mock non persinting default
+* UI Ready-to-use
+  - Very basic UI built with pure PHP, ideal for begginers learning to interact with APIs
+* UI Language: Portuguese (PT-BR)
+
+<div align="center">
+  <img src="https://github.com/juhachmann/simple_bookstore_api/blob/main/demo01.png" width="70%" height="70%" alt="Home">
+</div>
 
 
-# Instalation
+## Install
 
-Required:
-- PHP 8+
-- Maven
-- php-curl
+To install this application, you'll first need to have the following installed on your machine: 
+- [Java SDK 8+](https://openjdk.org/projects/jdk/17/)
+- [Maven](https://maven.apache.org/)
+- [PHP 8+](https://www.php.net/)
+- [php-curl](https://www.php.net/)
+- [lib-curl](https://curl.se/)
 
-First serve your api 
-- From /backend
-mvn spring:boot -run
+After that, run from your command line:
 
-Then serve your pages
-- From /frontend
-php -S localhost:8000
+```bash
+# Clone this repository
+$ git clone https://github.com/juhachmann/not_amazon_bookstore_api
+
+# Go into the repository backend project
+$ cd not_amazon_bookstore_api/backend
+
+# Install and serve your backend
+$ mvn spring-boot:run
+
+# Open another terminal
+
+# Go into the repository frontend project
+$ cd not_amazon_bookstore_api/frontend
+
+# Serve yout frontend
+$ php -S localhost:8000
+```
+
+Or open and run from your favorite IDEs
 
 
-# Credits
+## Endpoints
 
-Projects and tools used:
-- SpringBoot
-- CurlBuilder: https://curlbuilder.com/ 
-- CodeBeautify: https://codebeautify.org/curl-to-php-online
+| Method | Endpoint | Description | Request Body | 
+|------|-------|-----------|-----|
+| POST | /books | create new book | [Book](#Book) (without id)| 
+| GET | /books | see all books |  |
+| GET | /books?contains= | filter by contains |  | 
+| GET | /books?author= | filter by author | | 
+| GET | /books?title= | filter by title | |
+| GET | /books?isbn= | find by ISBN  | 
+| GET | /books/{id} | find by id | | 
+| PUT | /books/{id} | update book | [Book](#Book) (without id) | 
+| DELETE | /books/{id} | delete book | | 
+| DELETE | /books | delete ALL books | | 
+| PUT | /reprices/{rate} | adjust all prices  | | 
+| PUT | /reprices/{rate}/books/{id} | adjust price  | |
 
-# MORE INFO COMING SOON...
+### Book
+
+```json
+{
+  "id" : 1,
+  "isbn": "isbn",
+  "author": "Author Name",
+  "title": "Book Title",
+  "publisher": "Publisher Name",
+  "price": 100.99,
+  "imageUrl": "image/url.png"
+}
+```
+
+### curl for endpoints
+
+```bash
+# Ajdust base url and port if needed
+
+curl -XGET 'localhost:8081/books'
+
+curl -XGET 'localhost:8081/books?contains='
+
+curl -XGET 'localhost:8081/books?author='
+
+curl -XGET 'localhost:8081/books?title='
+
+curl -XGET 'localhost:8081/books?isbn='
+
+curl -XGET 'localhost:8081/books/{id}'
+
+curl -XDELETE 'localhost:8081/books'
+
+curl -XDELETE 'localhost:8081/books/{id}'
+
+curl -XPUT 'localhost:8081/reprices/{rate}'
+
+curl -XPUT 'localhost:8081/reprices/{rate}/books/{id}'
+
+curl -XPUT -H "Content-type: application/json" -d '{
+	"isbn" : "isbn",
+	"author" : "Author Name",
+	"title" : "Book Title",
+	"publisher" : "Publisher Name",
+	"price" : 100.99,
+	"imageUrl" : "image/url.png"
+}' 'localhost:8081/books/id'
+
+curl -XPOST -H "Content-type: application/json" -d '{
+	"isbn" : "isbn",
+	"author" : "Author Name",
+	"title" : "Book Title",
+	"publisher" : "Publisher Name",
+	"price" : 100.99,
+	"imageUrl" : "image/url.png"
+}' 'localhost:8081/books'
+```
+
+## Credits
+
+This software used the following packages and tools:
+
+- [SpringBoot](https://spring.io/projects/spring-boot)
+- [CurlBuilder](https://curlbuilder.com)
+- [CodeBeautify](https://codebeautify.org/curl-to-php-online)
+- [Bootstrap](https://getbootstrap.com/)
+
+
+## Context
+
+Developed as a learning exercise for a Web Services course / CTDS / IFSC / 2024.1
