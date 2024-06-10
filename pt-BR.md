@@ -14,7 +14,7 @@
   <a href="#instalação">Instalação</a> •
   <a href="#endpoints">Endpoints</a> •
   <a href="#créditos">Créditos</a> •
-  <a href="README.md">English</a> •
+  <a href="README.md">ENGLISH</a>
 </p>
 
 > Este projeto é ideal se você precisa de uma api pronta para uso para começar os seus projetos de frontend. Também pode ser útil se você quer um ponto de partida para a´aprender e brincar com o Spring Boot para construir apis REST
