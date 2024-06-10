@@ -13,8 +13,7 @@
   <a href="#features">Features</a> •
   <a href="#install">Install</a> •
   <a href="#endpoints">Endpoints</a> •
-  <a href="#credits">credits</a> •
-  <a href="#context">Context</a> •
+  <a href="#credits">Credits</a> •
 </p>
 
 > This project is ideal as ready-to-use api endpoints to start building your frontend projects. It may also be useful if you want a start point to learn and play with Spring Boot for building REST apis. 
@@ -153,7 +152,4 @@ This software used the following packages and tools:
 - [CodeBeautify](https://codebeautify.org/curl-to-php-online)
 - [Bootstrap](https://getbootstrap.com/)
 
-
-## Context
-
-Developed as a learning exercise for a Web Services course / CTDS / IFSC / 2024.1
+Developed as a learning exercise for a Web Services course / CTDS / IFSC / 2023.1
