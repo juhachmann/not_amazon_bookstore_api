@@ -17,10 +17,9 @@
   <a href="pt-BR.md">PT-BR</a>
 </p>
 
-> This project is ideal if you need a ready-to-use api to start building your frontend projects. It may also be useful if you want a starting point to learn and play around with Spring Boot.
+- - -
 
-
-> Developed as a web services learning exercise (Curso Técnico em Desenvolvimento de Sistemas / Instituto Federal de Santa Catarina / 2023.1) 
+This project is ideal if you need a ready-to-use api to start building your frontend projects. It may also be useful if you want a starting point to learn and play around with Spring Boot. Developed as a web services learning exercise (CTDS / IFSC / 2023.1) 
 
 ## Features
 
