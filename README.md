@@ -14,10 +14,13 @@
   <a href="#install">Install</a> •
   <a href="#endpoints">Endpoints</a> •
   <a href="#credits">Credits</a> •
-  <a href="pt-BR.md">PORTUGUÊS</a>
+  <a href="pt-BR.md">PT-BR</a>
 </p>
 
-> This project is ideal if you need a ready-to-use api to start building your frontend projects. It may also be useful if you want a starting point to learn and play around with Spring Boot for building REST apis. 
+> This project is ideal if you need a ready-to-use api to start building your frontend projects. It may also be useful if you want a starting point to learn and play around with Spring Boot.
+
+
+> Developed as a web services learning exercise (Curso Técnico em Desenvolvimento de Sistemas / Instituto Federal de Santa Catarina / 2023.1) 
 
 ## Features
 
@@ -27,8 +30,8 @@
   - Reprice your books by given percentage rates
 * Mock Datasource
   - You may add any other datasource or continue with a mock non persinting default
-* UI Ready-to-use
-  - Very basic UI built with pure PHP, ideal for begginers learning to interact with APIs
+* Ready-to-use UI
+  - Basic UI built with pure php, good for beginners learning to interact with APIs
 * UI Language: Portuguese (PT-BR)
 
 <div align="center">
@@ -61,10 +64,10 @@ $ ./bookstore.sh
 Open you browser and navigate to **_localhost:8000_**
 
 
-Alternatively, you can serve the backend and frontend independently: 
+You may also want to serve the backend and frontend independently: 
 
 ```bash
-# Go into the repository backend project
+# Go into the repository backend source
 $ cd not_amazon_bookstore_api/backend
 
 # Install and serve your backend
@@ -72,7 +75,7 @@ $ mvn spring-boot:run
 
 # Open another terminal
 
-# Go into the repository frontend project
+# Go into the repository frontend source
 $ cd not_amazon_bookstore_api/frontend
 
 # Serve yout frontend
@@ -165,6 +168,3 @@ This software uses the following 3rd party packages and tools:
 - [CurlBuilder](https://curlbuilder.com)
 - [CodeBeautify](https://codebeautify.org/curl-to-php-online)
 - [Bootstrap](https://getbootstrap.com/)
-
-> Developed as a learning exercise for a Web Services course.
-> Curso Técnico em Desenvolvimento de Sistemas / Instituto Federal de Santa Catarina / 2023.1
